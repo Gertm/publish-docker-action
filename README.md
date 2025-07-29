@@ -1,9 +1,9 @@
 # Publish Docker Action
 
-[![GitHub Action](https://github.com/jerray/publish-docker-action/workflows/Main/badge.svg)](https://github.com/jerray/publish-docker-action/actions?workflow=Main)
-[![codecov](https://codecov.io/gh/jerray/publish-docker-action/branch/master/graph/badge.svg)](https://codecov.io/gh/jerray/publish-docker-action)
-[![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/jerray/publish-docker-action?logo=github)](https://github.com/jerray/publish-docker-action/releases)
-[![Docker Pulls](https://img.shields.io/docker/pulls/jerray/publish-docker-action?logo=docker)](https://hub.docker.com/r/jerray/publish-docker-action)
+[![GitHub Action](https://github.com/Gertm/publish-docker-action/workflows/Main/badge.svg)](https://github.com/Gertm/publish-docker-action/actions?workflow=Main)
+[![codecov](https://codecov.io/gh/Gertm/publish-docker-action/branch/master/graph/badge.svg)](https://codecov.io/gh/Gertm/publish-docker-action)
+[![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/Gertm/publish-docker-action?logo=github)](https://github.com/Gertm/publish-docker-action/releases)
+[![Docker Pulls](https://img.shields.io/docker/pulls/Gertm/publish-docker-action?logo=docker)](https://hub.docker.com/r/Gertm/publish-docker-action)
 
 Publish Docker Action builds, creates tags and pushes docker image to your docker registry.
 
@@ -14,7 +14,7 @@ tag and push to docker default registry (docker.io). Repository name is your Git
 name by default.
 
 ```yaml
-- uses: jerray/publish-docker-action@master
+- uses: Gertm/publish-docker-action@master
   with:
     username: ${{ secrets.DOCKER_USERNAME }}
     password: ${{ secrets.DOCKER_PASSWORD }}
@@ -28,15 +28,15 @@ You can set docker registry with `registry` argument. Change docker repository n
 For example:
 
 ```yaml
-- uses: jerray/publish-docker-action@master
+- uses: Gertm/publish-docker-action@master
   with:
     username: ${{ secrets.DOCKER_USERNAME }}
     password: ${{ secrets.DOCKER_PASSWORD }}
     registry: docker.pkg.github.com
-    repository: jerray/publish-docker-action
+    repository: Gertm/publish-docker-action
 ```
 
-This will build and push the tag `docker.pkg.github.com/jerray/publish-docker-action:latest`.
+This will build and push the tag `docker.pkg.github.com/Gertm/publish-docker-action:latest`.
 
 ### Tags
 
@@ -45,32 +45,32 @@ This will build and push the tag `docker.pkg.github.com/jerray/publish-docker-ac
 You can use static tag list by providing `tags` argument. Concat multiple tag names with commas.
 
 ```yaml
-- uses: jerray/publish-docker-action@master
+- uses: Gertm/publish-docker-action@master
   with:
     username: ${{ secrets.DOCKER_USERNAME }}
     password: ${{ secrets.DOCKER_PASSWORD }}
     registry: docker.pkg.github.com
-    repository: jerray/publish-docker-action
+    repository: Gertm/publish-docker-action
     tags: latest,newest,master
 ```
 
 This example builds the image, creates three tags, and pushes all of them to the registry.
 
-* `docker.pkg.github.com/jerray/publish-docker-action:latest`
-* `docker.pkg.github.com/jerray/publish-docker-action:newest`
-* `docker.pkg.github.com/jerray/publish-docker-action:master`
+* `docker.pkg.github.com/Gertm/publish-docker-action:latest`
+* `docker.pkg.github.com/Gertm/publish-docker-action:newest`
+* `docker.pkg.github.com/Gertm/publish-docker-action:master`
 
 #### Auto Tag
 
 Set `with.auto_tag: true` to allow action generate docker image tags automatically.
 
 ```yaml
-- uses: jerray/publish-docker-action@master
+- uses: Gertm/publish-docker-action@master
   with:
     username: ${{ secrets.DOCKER_USERNAME }}
     password: ${{ secrets.DOCKER_PASSWORD }}
     registry: docker.pkg.github.com
-    repository: jerray/publish-docker-action
+    repository: Gertm/publish-docker-action
     auto_tag: true
 ```
 
@@ -98,12 +98,12 @@ Additionally, there's an output value `tag` you can use [in your next steps](htt
 
 ```yaml
 - id: build
-  uses: jerray/publish-docker-action@master
+  uses: Gertm/publish-docker-action@master
   with:
     username: ${{ secrets.DOCKER_USERNAME }}
     password: ${{ secrets.DOCKER_PASSWORD }}
     registry: docker.pkg.github.com
-    repository: jerray/publish-docker-action
+    repository: Gertm/publish-docker-action
     auto_tag: true
 
 - id: deploy
@@ -122,12 +122,12 @@ Provide `with.cache` argument to build from cache.
 Use `with.build_args` to provide docker build-time variables. Multiple variables must be separated by comma. 
 
 ```yaml
-- uses: jerray/publish-docker-action@master
+- uses: Gertm/publish-docker-action@master
   with:
     username: ${{ secrets.DOCKER_USERNAME }}
     password: ${{ secrets.DOCKER_PASSWORD }}
     registry: docker.pkg.github.com
-    repository: jerray/publish-docker-action
+    repository: Gertm/publish-docker-action
     build_args: HTTP_PROXY=http://127.0.0.1,USER=nginx
 ```
 
