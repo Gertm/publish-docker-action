@@ -12,6 +12,7 @@ func setOutput(name, value string) {
 		slog.Error("cannot open GITHUB_OUTPUT for writing", "error", err)
 		return
 	}
+	defer f.Close()
 	_, err = fmt.Fprintf(f, "{%s}={%s}", name, value)
 	if err != nil {
 		slog.Error("cannot write to GITHUB_OUTPUT", "error", err)
