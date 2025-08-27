@@ -1,4 +1,4 @@
-module github.com/jerray/publish-docker-action
+module github.com/Gertm/publish-docker-action
 
 go 1.13
 
