@@ -1,10 +1,5 @@
 # Publish Docker Action
 
-[![GitHub Action](https://github.com/Gertm/publish-docker-action/workflows/Main/badge.svg)](https://github.com/Gertm/publish-docker-action/actions?workflow=Main)
-[![codecov](https://codecov.io/gh/Gertm/publish-docker-action/branch/master/graph/badge.svg)](https://codecov.io/gh/Gertm/publish-docker-action)
-[![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/Gertm/publish-docker-action?logo=github)](https://github.com/Gertm/publish-docker-action/releases)
-[![Docker Pulls](https://img.shields.io/docker/pulls/Gertm/publish-docker-action?logo=docker)](https://hub.docker.com/r/Gertm/publish-docker-action)
-
 Publish Docker Action builds, creates tags and pushes docker image to your docker registry.
 
 ## Usage
